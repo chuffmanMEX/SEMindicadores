@@ -1,0 +1,496 @@
+\documentclass[11pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Ecuaciones estructurales (SEM) para indicadores sociales},
+            pdfauthor={Dr.~Héctor Nájera y Dr.~Curtis Hoffman},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Ecuaciones estructurales (SEM) para indicadores sociales}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Dr.~Héctor Nájera y Dr.~Curtis Hoffman}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2019}
+
+\linespread{1.05}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+
+\hypertarget{presentacion-del-curso-ecuaciones-estructurales-sem-y-medicion-social}{%
+\section{Presentación del curso: Ecuaciones Estructurales (SEM) y
+medición
+social}\label{presentacion-del-curso-ecuaciones-estructurales-sem-y-medicion-social}}
+
+El objetivo del curso es desarrollar las capacidades críticas y
+análiticas de los estudiantes para la producción y análisis de
+indicadores sociales como pobreza, marginación, clase social, etc. Al
+final del curso la expectativa es que los alumnos sean capaces de:
+
+\begin{itemize}
+\tightlist
+\item
+  Encender por qué es importante trabajar con medidas falsables en
+  ciencias sociales
+\item
+  Identificar la diferencia entre un método de agregación y una
+  metodología de escrutinio empírico
+\item
+  Apreciar la relevancia de la teoría de la medida para examinar índices
+  sociales
+\item
+  Comprender los vínculos entre la teoría de la medida, variables
+  latentes y ecuaciones estructurales
+\item
+  Entender por qué los principios de confiabilidad y validez son una
+  necesidad necesaria para una calidad mínima de medición
+\item
+  Implementar análisis de ecuaciones estructirales de confiabilidad y
+  validez usando \textbf{R-software} y \textbf{Mplus}
+\item
+  Interpretar los resultados de los análisis de una forma crítica
+\item
+  Identificar los usos apropiados e inapropiados de ecuaciones
+  estructurales \# Características de las sesiones
+\end{itemize}
+
+Las sesiones combinan discusión, teoría y aplicación con el programa R.
+Antes de cada clase, los alumnos deberán leer una selección de artículos
+para su discusión en grupo. Los docentes impartirán cada sesión y se
+dedicará siempre un espacio para discusión y/o implementación de
+análisis usando el programa R.
+
+\hypertarget{lugar-y-hora}{%
+\subsection{Lugar y hora}\label{lugar-y-hora}}
+
+Miércoles. Salón 205. 4 a 7 pm.
+
+\hypertarget{evaluacion}{%
+\subsection{Evaluación}\label{evaluacion}}
+
+Tres ejercicios.
+
+Dos ejercicios que combinan análisis crítico y aplicaciones.
+
+Un ejercicio final que consiste en producir una medida válida y
+confiable.
+
+\newpage
+
+\hypertarget{clase-1-07082019-presentacion-descripcion-y-relevancia-del-curso}{%
+\section{Clase 1 (07/08/2019) ``Presentación, descripción y relevancia
+del
+curso''}\label{clase-1-07082019-presentacion-descripcion-y-relevancia-del-curso}}
+
+\hypertarget{objetivo}{%
+\subsection{Objetivo}\label{objetivo}}
+
+Introducir el curso y algunas nociones básicas de por qué es importante
+desde el punto de vista académico y de política pública. Se subrayará la
+importancia del curso haciendo referencia a algunas de las consecuencias
+de medir mal en ciencias sociales.
+
+\hypertarget{dinamica}{%
+\subsection{Dinámica}\label{dinamica}}
+
+La clase se divide en tres partes. Primero, los docentes explicarán por
+qué el curso se llama así, cuáles son sus los objetivos del mismo,
+características de las sesiones, expectativas y forma de evaluación.
+Segundo, se hará una breve discusión para conocer por qué los alumnos se
+interesaron en el curso y su familiaridad con los temas del curso
+(medición, falsación en ciencias, replicabilidad, uso de programas
+estadísticos). Tercero, los docentes hablarán sobre por qué la medición
+es importante desde el punto de vista académico (discusiones
+interminables y discursivas sobre qué medida es mejor, análisis espurios
+con medidas espurias) y práctico (problemas para la formulación de
+política).
+
+\hypertarget{lecturas-para-la-siguiente-sesion}{%
+\subsection{Lecturas para la siguiente
+sesión}\label{lecturas-para-la-siguiente-sesion}}
+
+Hanson (1958)
+
+Duhem (1991)
+
+Loken and Gelman (2017)
+
+\hypertarget{clase-2-14082019-observacion-medicion-y-error}{%
+\section{Clase 2 (14/08/2019) ``Observación, medición y
+error''}\label{clase-2-14082019-observacion-medicion-y-error}}
+
+\hypertarget{objetivo-1}{%
+\subsection{Objetivo}\label{objetivo-1}}
+
+El objetivo principal de esta sesión es introducir y discutir los
+conceptos de observación, objetividad y medición en ciencias. Se pondrá
+énfasis en la crítica a la medición objetiva, directa y perfecta y en
+las implicaciones que esto tiene para producir indicadores y medidas en
+ciencias sociales.
+
+\hypertarget{dinamica-1}{%
+\subsection{Dinámica}\label{dinamica-1}}
+
+Los docentes presentarán las ideas y conceptos básicos y motivarán la
+discusión grupal sobre los puntos críticos del tema de la clase. Se
+pondrán ejemplos para motivar la discusión entre los alumnos. La última
+parte de la sesión conectará los obstáculos en la observación con las
+crisis actuales en el quehacer científico en materia de medición.
+
+\hypertarget{lecturas-para-esta-sesion}{%
+\subsection{Lecturas para esta sesión}\label{lecturas-para-esta-sesion}}
+
+Hanson (1958)
+
+Duhem (1991)
+
+Loken and Gelman (2017)
+
+\hypertarget{lecturas-para-siguiente-sesion}{%
+\subsection{Lecturas para siguiente
+sesión}\label{lecturas-para-siguiente-sesion}}
+
+Kvalheim (2012)
+
+Michell (2015)
+
+\hypertarget{clase-3-21082019-historia-de-la-teoria-de-la-medida-variables-latentes-y-ecuaciones-estructurales}{%
+\section{Clase 3 (21/08/2019) ``Historia de la teoría de la medida:
+Variables latentes y ecuaciones
+estructurales''}\label{clase-3-21082019-historia-de-la-teoria-de-la-medida-variables-latentes-y-ecuaciones-estructurales}}
+
+\hypertarget{objetivo-2}{%
+\subsection{Objetivo}\label{objetivo-2}}
+
+Introducir a los alumnos a las razones que dieron orígen a la teoría de
+la medida y describir su evolución. La teoría de la medida tiene más de
+un siglo y sin embargo hay áreas que se resisten a implementarla. Se
+impartirán algunas nociones básicas de medición en ciencias sociales
+-ordenamiento y clasificación de grupos- y se mostrará cómo la historia
+de la teoría de la medida sea ha incorporado en los marcos modernos de
+variables latentes y de ecuaciones estructurales.
+
+\hypertarget{dinamica-2}{%
+\subsection{Dinámica}\label{dinamica-2}}
+
+Los docentes relatarán los episodios claves de la historia del
+desarrollo de la teoría de la medida y pondrán énfasis en algunos
+conceptos claves: error, proxy, variable latente, variables,
+ordenamiento poblacional, indicadores e índices. La discusión girará en
+torno a estos conceptos a fin de que los alumnos se familiaricen con
+estos términos.
+
+\hypertarget{lecturas-para-esta-sesion-1}{%
+\subsection{Lecturas para esta
+sesión}\label{lecturas-para-esta-sesion-1}}
+
+Kvalheim (2012)
+
+Michell (2015)
+
+Bandalos (2018) (Capítulo 1) o Thorndike and Hagen (1969) (Capítulo 1)
+
+({\textbf{???}}) (Capítulo 2) **Solicitar
+
+McDonald (1999) (Capitulo 4)
+
+\hypertarget{lecturas-para-siguiente-sesion-1}{%
+\subsection{Lecturas para siguiente
+sesión}\label{lecturas-para-siguiente-sesion-1}}
+
+Bandalos (2018) (Capítulo 1)
+
+Brennan (2006) (Primera sección: Theory and General Principles)
+**Solicitar
+
+Cudeck and MacCallum (2012) (Introducción)
+
+({\textbf{???}}) (Capítulo 2) **Solicitar
+
+McDonald (1999) (Capitulo 4)
+
+\hypertarget{clase-4-28082019-principios-practicas-y-estandares-cientificos-para-la-medicion}{%
+\section{Clase 4 (28/08/2019) ``Principios, prácticas y estándares
+científicos para la
+medición''}\label{clase-4-28082019-principios-practicas-y-estandares-cientificos-para-la-medicion}}
+
+\hypertarget{objetivo-3}{%
+\subsection{Objetivo}\label{objetivo-3}}
+
+Inroducir y discutir algunos conceptos básicos en medición como: pasos
+para producción de una escala/índice, métricas de indicadores, unidades
+de medida y agregación. Nos enfocaremos en preguntas claves como: Por
+qué un índice y no indicadores sueltos? Qué es un índice? Después
+hablaremos de cómo saber si el índice resultante es bueno, malo o
+regular a fin de establecer un puente con los estándares de validez y
+confiabilidad.
+
+\hypertarget{dinamica-3}{%
+\subsection{Dinámica}\label{dinamica-3}}
+
+Los docentes brinarán una introducción y definición de los principales
+conceptos y se harán algunos ejercicios en grupo para que los
+estudiantes se familiarecen con estos términos.
+
+\hypertarget{lecturas-para-esta-sesion-2}{%
+\subsection{Lecturas para esta
+sesión}\label{lecturas-para-esta-sesion-2}}
+
+Bandalos (2018) (Capítulo 1)
+
+Brennan (2006) (Primera sección: Theory and General Principles)
+**Solicitar
+
+Cudeck and MacCallum (2012) (Introducción)
+
+({\textbf{???}}) (Capítulo 2) **Solicitar
+
+\hypertarget{lecturas-para-siguiente-sesion-2}{%
+\subsection{Lecturas para siguiente
+sesión}\label{lecturas-para-siguiente-sesion-2}}
+
+Bandalos (2018) (Capítulo 3)
+
+Thorndike and Hagen (1969) (Capítulo 4)
+
+Novick (1966) (Axiomas de la teoría clásica)
+
+({\textbf{???}}) (libro abierto en línea)
+
+Revelle and Zinbarg (2009)
+
+McDonald (1999) (Capitulo 4)
+
+\hypertarget{clase-5-04092019-confiabilidad-teoria-del-test-clasico.-estadisticos-de-confiabilidad}{%
+\section{Clase 5 (04/09/2019) ``Confiabilidad: Teoría del test clásico.
+Estadísticos de
+confiabilidad''}\label{clase-5-04092019-confiabilidad-teoria-del-test-clasico.-estadisticos-de-confiabilidad}}
+
+\hypertarget{lecturas-para-esta-sesion-3}{%
+\subsection{Lecturas para esta
+sesión}\label{lecturas-para-esta-sesion-3}}
+
+Bandalos (2018) (Capítulo 3)
+
+Thorndike and Hagen (1969) (Capítulo 4)
+
+Novick (1966) (Axiomas de la teoría clásica)
+
+({\textbf{???}}) (libro abierto en línea)
+
+Revelle and Zinbarg (2009)
+
+\hypertarget{lecturas-para-siguiente-sesion-3}{%
+\subsection{Lecturas para siguiente
+sesión}\label{lecturas-para-siguiente-sesion-3}}
+
+Revelle and Zinbarg (2009)
+
+Zinbarg et al. (2005)
+
+\hypertarget{clase-6-11092019-confiabilidad-teoria-de-variables-latentes-y-ecuaciones-estructurales}{%
+\section{Clase 6 (11/09/2019) ``Confiabilidad: Teoría de variables
+latentes y ecuaciones
+estructurales''}\label{clase-6-11092019-confiabilidad-teoria-de-variables-latentes-y-ecuaciones-estructurales}}
+
+\hypertarget{clase-7-18092019-confiabilidad-practica.-estadisticos-clasicos-y-modernos-de-confiabilidad}{%
+\section{Clase 7 (18/09/2019) ``Confiabilidad: Práctica. Estadísticos
+clásicos y modernos de
+confiabilidad''}\label{clase-7-18092019-confiabilidad-practica.-estadisticos-clasicos-y-modernos-de-confiabilidad}}
+
+\hypertarget{clase-8-25092019-confiabilidad-practica-con-datos-relaes}{%
+\section{Clase 8 (25/09/2019) ``Confiabilidad: Práctica con datos
+relaes''}\label{clase-8-25092019-confiabilidad-practica-con-datos-relaes}}
+
+\hypertarget{clase-9-02102019-ejercicio-1-analsis-de-confiabilidad}{%
+\section{Clase 9 (02/10/2019) ``Ejercicio 1: Análsis de
+confiabilidad''}\label{clase-9-02102019-ejercicio-1-analsis-de-confiabilidad}}
+
+\hypertarget{clase-10-09102019-validez-teoria---tipos-de-validez}{%
+\section{Clase 10 (09/10/2019) ``Validez: Teoría - Tipos de
+validez''}\label{clase-10-09102019-validez-teoria---tipos-de-validez}}
+
+\hypertarget{clase-11-16102019-validez-de-constructo-y-criterio-en-el-marco-de-ecuaciones-estructurales}{%
+\section{Clase 11 (16/10/2019) ``Validez de constructo y criterio en el
+marco de ecuaciones
+estructurales''}\label{clase-11-16102019-validez-de-constructo-y-criterio-en-el-marco-de-ecuaciones-estructurales}}
+
+\hypertarget{clase-12-23102019-validez-practica.-analisis-de-constructo-y-criterio}{%
+\section{Clase 12 (23/10/2019) ``Validez: Práctica. Analisis de
+constructo y
+criterio''}\label{clase-12-23102019-validez-practica.-analisis-de-constructo-y-criterio}}
+
+\hypertarget{clase-13-30102019-validez-practica-con-datos-reales}{%
+\section{Clase 13 (30/10/2019) ``Validez: Práctica con datos
+reales''}\label{clase-13-30102019-validez-practica-con-datos-reales}}
+
+\hypertarget{clase-14-06112019-ejercicio-2-analisis-de-validez}{%
+\section{Clase 14 (06/11/2019) ``Ejercicio 2: Análisis de
+validez''}\label{clase-14-06112019-ejercicio-2-analisis-de-validez}}
+
+\hypertarget{clase-15-13112019-medcion-invariante-comparabilidad-de-medidas-en-el-tiempo-y-grupos}{%
+\section{Clase 15 (13/11/2019) ``Medción invariante: Comparabilidad de
+medidas en el tiempo y
+grupos''}\label{clase-15-13112019-medcion-invariante-comparabilidad-de-medidas-en-el-tiempo-y-grupos}}
+
+\hypertarget{clase-16-20112019-medcion-invariante-practica}{%
+\section{Clase 16 (20/11/2019) ``Medción invariante:
+Práctica''}\label{clase-16-20112019-medcion-invariante-practica}}
+
+\hypertarget{clase-17-27112019-planteamiento-del-ejercicio-final}{%
+\section{Clase 17 (27/11/2019) ``Planteamiento del ejercicio
+final''}\label{clase-17-27112019-planteamiento-del-ejercicio-final}}
+
+\hypertarget{clase-18-04122019-revision-del-ejercicio-final}{%
+\section{Clase 18 (04/12/2019) ``Revisión del ejercicio
+final''}\label{clase-18-04122019-revision-del-ejercicio-final}}
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\newpage
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Bandalos2018}{}%
+Bandalos, Deborah L. 2018. \emph{Measurement Theory and Applications for
+the Social Sciences}. Guilford Publications.
+
+\leavevmode\hypertarget{ref-Brennan2006}{}%
+Brennan, Robert L. 2006. \emph{Educational Measurement. ACE/Praeger
+Series on Higher Education.} ERIC.
+
+\leavevmode\hypertarget{ref-Cudeck2012}{}%
+Cudeck, Robert, and Robert C. MacCallum. 2012. \emph{Factor Analysis at
+100: Historical Developments and Future Directions}. Routledge.
+
+\leavevmode\hypertarget{ref-Duhem1991}{}%
+Duhem, Pierre Maurice Marie. 1991. \emph{The Aim and Structure of
+Physical Theory}. Vol. 13. Princeton University Press.
+
+\leavevmode\hypertarget{ref-Hanson1958}{}%
+Hanson, Norwood Russell. 1958. \emph{Patterns of Discovery: An Inquiry
+into the Conceptual Foundations of Science}. Vol. 251. CUP Archive.
+
+\leavevmode\hypertarget{ref-Kvalheim2012}{}%
+Kvalheim, Olav M. 2012. ``History, Philosophy and Mathematical Basis of
+the Latent Variable Approach: From a Peculiarity in Psychology to a
+General Method for Analysis of Multivariate Data.'' \emph{Journal of
+Chemometrics} 26 (6): 210--17. \url{https://doi.org/10.1002/cem.2427}.
+
+\leavevmode\hypertarget{ref-Loken2017}{}%
+Loken, Eric, and Andrew Gelman. 2017. ``Measurement Error and the
+Replication Crisis.'' \emph{Science} 355 (6325): 584--85.
+\url{https://doi.org/10.1126/science.aal3618}.
+
+\leavevmode\hypertarget{ref-McDonald1999}{}%
+McDonald, R. P. 1999. \emph{Test Theory: A Unified Treatment}. Edited by
+R. P. McDonald. Mahwah, N.J. L. Erlbaum Associates.
+
+\leavevmode\hypertarget{ref-Michell2015}{}%
+Michell, Joel. 2015. ``Measurement Theory: History and Philosophy.'' In
+\emph{International Encyclopedia of the Social \& Behavioral Sciences
+(Second Edition)}, edited by James D. Wright, Second Edition, 868--72.
+Oxford: Elsevier.
+\url{https://doi.org/https://doi.org/10.1016/B978-0-08-097086-8.43062-X}.
+
+\leavevmode\hypertarget{ref-Novick1966}{}%
+Novick, Melvin R. 1966. ``The Axioms and Principal Results of Classical
+Test Theory.'' \emph{Journal of Mathematical Psychology} 3 (1): 1--18.
+\url{https://doi.org/https://doi.org/10.1016/0022-2496(66)90002-2}.
+
+\leavevmode\hypertarget{ref-Revelle2009}{}%
+Revelle, William, and Richard. Zinbarg. 2009. ``Coefficients Alpha,
+Beta, Omega, and the Glb: Comments on Sijtsma.'' \emph{Psychometrika} 74
+(1): 145--54. \url{https://doi.org/10.1007/s11336-008-9102-z}.
+
+\leavevmode\hypertarget{ref-Thorndike1969}{}%
+Thorndike, R., and Elizabeth Hagen. 1969. ``Measurement and Evaluation
+in Education and Psychology.'' New York, NY: John Wiley; Sons.
+
+\leavevmode\hypertarget{ref-Zinbarg2005}{}%
+Zinbarg, RichardE., William Revelle, Iftah Yovel, and Wen Li. 2005.
+``Cronbach's \(\alpha\), Revelle's \(\beta\), and Mcdonald's
+\(\omega_h\) : Their Relations with Each Other and Two Alternative
+Conceptualizations of Reliability.'' \emph{Psychometrika} 70 (1):
+123--33. \url{https://doi.org/10.1007/s11336-003-0974-7}.
+
+
+\end{document}

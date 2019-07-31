@@ -1,0 +1,215 @@
+---
+output: 
+  pdf_document:
+    keep_tex: true
+    toc: true
+    fig_caption: yes
+geometry: margin=1in
+split_by: chapter
+
+title: "Ecuaciones estructurales (SEM) para indicadores sociales"
+author: Dr. Héctor Nájera y Dr. Curtis Hoffman
+date: "2019"
+bibliography: [References_markdown.bib]
+
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+---
+
+\newpage
+
+# Presentación del curso: Ecuaciones Estructurales (SEM) y medición social
+
+El objetivo del curso es desarrollar las capacidades críticas y análiticas de los estudiantes para la producción y análisis de indicadores sociales como pobreza, marginación, clase social, etc. Al final del curso la expectativa es que los alumnos sean capaces de:
+
+* Encender por qué es importante trabajar con medidas falsables en ciencias sociales
+* Identificar la diferencia entre un método de agregación y una metodología de escrutinio empírico
+* Apreciar la relevancia de la teoría de la medida para examinar índices sociales 
+* Comprender los vínculos entre la teoría de la medida, variables latentes y ecuaciones estructurales
+* Entender por qué los principios de confiabilidad y validez son una necesidad necesaria para una calidad mínima de medición
+* Implementar análisis de ecuaciones estructirales de confiabilidad y validez usando **R-software** y **Mplus**
+* Interpretar los resultados de los análisis de una forma crítica
+* Identificar los usos apropiados e inapropiados de ecuaciones estructurales
+# Características de las sesiones
+
+Las sesiones combinan discusión, teoría y aplicación con el programa R. Antes de cada clase, los alumnos deberán leer una selección de artículos para su discusión en grupo. Los docentes impartirán cada sesión y se dedicará siempre un espacio para discusión y/o implementación de análisis usando el programa R. 
+
+## Lugar y hora
+
+Miércoles. Salón 205. 4 a 7 pm.
+
+## Evaluación 
+
+Tres ejercicios. 
+
+Dos ejercicios que combinan análisis crítico y aplicaciones.
+
+Un ejercicio final que consiste en producir una medida válida y confiable.
+
+\newpage
+
+# Clase 1 (07/08/2019) "Presentación, descripción y relevancia del curso"
+
+## Objetivo 
+
+Introducir el curso y algunas nociones básicas de por qué es importante desde el punto de vista académico y de política pública. Se subrayará la importancia del curso haciendo referencia a algunas de las consecuencias de medir mal en ciencias sociales. 
+
+## Dinámica
+
+La clase se divide en tres partes. Primero, los docentes explicarán por qué el curso se llama así, cuáles son sus los objetivos del mismo, características de las sesiones, expectativas y forma de evaluación. Segundo, se hará una breve discusión para conocer por qué los alumnos se interesaron en el curso y su familiaridad con los temas del curso (medición, falsación en ciencias, replicabilidad, uso de programas estadísticos). Tercero, los docentes hablarán sobre por qué la medición es importante desde el punto de vista académico (discusiones interminables y discursivas sobre qué medida es mejor, análisis espurios con medidas espurias) y práctico (problemas para la formulación de política). 
+
+## Lecturas para la siguiente sesión
+
+@Hanson1958
+
+@Duhem1991
+
+@Loken2017
+
+# Clase 2 (14/08/2019) "Observación, medición y error"
+
+## Objetivo
+
+El objetivo principal de esta sesión es introducir y discutir los conceptos de observación, objetividad y medición en ciencias. Se pondrá énfasis en la crítica a la medición objetiva, directa y perfecta y en las implicaciones que esto tiene para producir indicadores y medidas en ciencias sociales. 
+
+## Dinámica
+
+Los docentes presentarán las ideas y conceptos básicos y motivarán la discusión grupal sobre los puntos críticos del tema de la clase. Se pondrán ejemplos para motivar la discusión entre los alumnos. La última parte de la sesión conectará los obstáculos en la observación con las crisis actuales en el quehacer científico en materia de medición. 
+
+## Lecturas para esta sesión
+
+@Hanson1958
+
+@Duhem1991
+
+@Loken2017
+
+## Lecturas para siguiente sesión
+
+@Kvalheim2012
+
+@Michell2015
+
+# Clase 3 (21/08/2019) "Historia de la teoría de la medida: Variables latentes y ecuaciones estructurales"
+
+## Objetivo 
+
+Introducir a los alumnos a las razones que dieron orígen a la teoría de la medida y describir su evolución. La teoría de la medida tiene más de un siglo y sin embargo hay áreas que se resisten a implementarla. Se impartirán algunas nociones básicas de medición en ciencias sociales -ordenamiento y clasificación de grupos- y se mostrará cómo la historia de la teoría de la medida sea ha incorporado en los marcos modernos de variables latentes y de ecuaciones estructurales. 
+
+## Dinámica
+
+Los docentes relatarán los episodios claves de la historia del desarrollo de la teoría de la medida y pondrán énfasis en algunos conceptos claves: error, proxy, variable latente, variables, ordenamiento poblacional, indicadores e índices. La discusión girará en torno a estos conceptos a fin de que los alumnos se familiaricen con estos términos. 
+
+## Lecturas para esta sesión
+
+@Kvalheim2012
+
+@Michell2015
+
+@Bandalos2018 (Capítulo 1) o @Thorndike1969 (Capítulo 1)
+
+@DeVellis2017 (Capítulo 2) **Solicitar
+
+@McDonald1999 (Capitulo 4)
+
+## Lecturas para siguiente sesión
+
+@Bandalos2018 (Capítulo 1)
+
+@Brennan2006 (Primera sección: Theory and General Principles) **Solicitar
+
+@Cudeck2012 (Introducción)
+
+@Furr2018 (Capítulo 2) **Solicitar
+
+@McDonald1999 (Capitulo 4)
+
+# Clase 4 (28/08/2019) "Principios, prácticas y estándares científicos para la medición"
+
+## Objetivo 
+
+Inroducir y discutir algunos conceptos básicos en medición como: pasos para producción de una escala/índice, métricas de indicadores, unidades de medida y agregación. Nos enfocaremos en preguntas claves como: Por qué un índice y no indicadores sueltos? Qué es un índice? Después hablaremos de cómo saber si el índice resultante es bueno, malo o regular a fin de establecer un puente con los estándares de validez y confiabilidad. 
+
+## Dinámica
+
+Los docentes brinarán una introducción y definición de los principales conceptos y se harán algunos ejercicios en grupo para que los estudiantes se familiarecen con estos términos. 
+
+## Lecturas para esta sesión
+
+@Bandalos2018 (Capítulo 1)
+
+@Brennan2006 (Primera sección: Theory and General Principles) **Solicitar
+
+@Cudeck2012 (Introducción)
+
+@Furr2018 (Capítulo 2) **Solicitar
+
+## Lecturas para siguiente sesión
+
+@Bandalos2018 (Capítulo 3)
+
+@Thorndike1969  (Capítulo 4)
+
+@Novick1966 (Axiomas de la teoría clásica)
+
+@Revelleinpress (libro abierto en línea)
+
+@Revelle2009
+
+@McDonald1999 (Capitulo 4)
+
+# Clase 5 (04/09/2019) "Confiabilidad: Teoría del test clásico. Estadísticos de confiabilidad"
+
+
+
+## Lecturas para esta sesión
+
+@Bandalos2018 (Capítulo 3)
+
+@Thorndike1969  (Capítulo 4)
+
+@Novick1966 (Axiomas de la teoría clásica)
+
+@Revelleinpress (libro abierto en línea)
+
+@Revelle2009
+
+
+## Lecturas para siguiente sesión
+
+@Revelle2009
+
+@Zinbarg2005
+
+# Clase 6 (11/09/2019) "Confiabilidad: Teoría de variables latentes y ecuaciones estructurales"
+
+# Clase 7 (18/09/2019) "Confiabilidad: Práctica. Estadísticos clásicos y modernos de confiabilidad"
+
+# Clase 8 (25/09/2019) "Confiabilidad: Práctica con datos relaes"
+
+# Clase 9 (02/10/2019) "Ejercicio 1: Análsis de confiabilidad"
+
+# Clase 10 (09/10/2019) "Validez: Teoría - Tipos de validez"
+
+# Clase 11 (16/10/2019) "Validez de constructo y criterio en el marco de ecuaciones estructurales"
+
+# Clase 12 (23/10/2019) "Validez: Práctica. Analisis de constructo y criterio"
+
+# Clase 13 (30/10/2019) "Validez: Práctica con datos reales"
+
+# Clase 14 (06/11/2019) "Ejercicio 2: Análisis de validez"
+
+# Clase 15 (13/11/2019) "Medción invariante: Comparabilidad de medidas en el tiempo y grupos"
+
+# Clase 16 (20/11/2019) "Medción invariante: Práctica"
+
+# Clase 17 (27/11/2019) "Planteamiento del ejercicio final"
+
+# Clase 18 (04/12/2019) "Revisión del ejercicio final"
+
+# References
+
+\newpage
+
+
