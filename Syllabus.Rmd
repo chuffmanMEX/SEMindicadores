@@ -8,7 +8,7 @@ geometry: margin=1in
 split_by: chapter
 
 title: "Ecuaciones estructurales (SEM) para indicadores sociales"
-author: Dr. Héctor Nájera y Dr. Curtis Hoffman
+author: Dr. Héctor Nájera y Dr. Curtis Hoffman2
 date: "2019"
 bibliography: [References_markdown.bib]
 
