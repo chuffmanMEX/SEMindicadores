@@ -1,7 +1,6 @@
 ---
 output: 
-  pdf_document:
-    keep_tex: true
+  pdf_document: 
     toc: true
     fig_caption: yes
 geometry: margin=1in

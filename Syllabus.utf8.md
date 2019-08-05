@@ -8,7 +8,7 @@ geometry: margin=1in
 split_by: chapter
 
 title: "Ecuaciones estructurales (SEM) para indicadores sociales"
-author: Dr. Héctor Nájera y Dr. Curtis Hoffman
+author: Dr. Héctor Nájera y Dr. Curtis Huffman
 date: "2019"
 bibliography: [References_markdown.bib]
 
@@ -21,7 +21,7 @@ header-includes:
 
 # Presentación del curso: Ecuaciones Estructurales (SEM) y medición social
 
-El sobjetivo del curso es desarrollar las capacidades críticas y analíticas de los estudiantes para la producción y escrutinio de índices sociales como pobreza, marginación, clase social, precariedad laboral, seguridad alimentaria, derechos sociales, etc. Al final del curso la expectativa es que los alumnos sean capaces de:
+El objetivo del curso es desarrollar las capacidades críticas y analíticas de los estudiantes para la producción y escrutinio de índices sociales como pobreza, marginación, clase social, precariedad laboral, seguridad alimentaria, derechos sociales, etc. Al final del curso la expectativa es que los alumnos sean capaces de:
 
 * Encender por qué es importante trabajar con medidas falsables en ciencias sociales
 * Identificar la diferencia entre un método de agregación y una metodología de escrutinio empírico
