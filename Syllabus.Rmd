@@ -19,7 +19,7 @@ header-includes:
 
 \newpage
 
-# Presentación del curso: Ecuaciones Estructurales (SEM) y medición social
+# Presentación del curso: Ecuaciones Estructurales (SEM) y medición económico social
 
 El objetivo del curso es desarrollar las capacidades críticas y analíticas de los estudiantes para la producción y escrutinio de índices sociales como pobreza, marginación, clase social, precariedad laboral, seguridad alimentaria, derechos sociales, etc. Al final del curso la expectativa es que los alumnos sean capaces de:
 
@@ -44,7 +44,7 @@ https://github.com/hectornajera83/SEMindicadores
 
 ## Lugar y hora
 
-Miércoles. Salón 205. 4 a 7 pm.
+Miércoles. Salón 209. 4 a 7 pm.
 
 ## Evaluación 
 
@@ -85,6 +85,8 @@ La clase se divide en tres partes.
 ### Esencial
 
 @Hanson2018 - Capítulo 1
+
+@Stevens1946 
 
 ### Sugeridas
 

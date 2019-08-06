@@ -2076,11 +2076,4 @@ Selection of a psychometric approach depends on many factors. Researchers should
   editor    = {Duhem, Pierre},
 }
 
-@Article{Stevens1946,
-  author    = {Stevens, Stanley Smith and others},
-  title     = {On the theory of scales of measurement},
-  year      = {1946},
-  publisher = {Bobbs-Merrill, College Division},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

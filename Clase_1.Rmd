@@ -1,0 +1,75 @@
+---
+title: "Clase 1. SEM y medición económico social"
+author: "Dr. Héctor Nájera y Dr. Curtis Huffman"
+date: "7/8/2019"
+output: slidy_presentation
+bibliography: [References_markdown.bib]
+---
+
+
+# Presentación del curso: Ecuaciones Estructurales (SEM) y medición económico social
+
+El objetivo del curso es desarrollar las capacidades críticas y analíticas de los estudiantes para la producción y escrutinio de índices sociales como pobreza, marginación, clase social, precariedad laboral, seguridad alimentaria, derechos sociales, etc. 
+
+# Al final del curso la expectativa es que los alumnos sean capaces de:
+
+* Encender por qué es importante trabajar con medidas falsables en ciencias sociales
+* Identificar la diferencia entre un método de agregación y una metodología de escrutinio empírico
+* Apreciar la relevancia de la teoría de la medida para examinar índices sociales 
+* Comprender los vínculos entre la teoría de la medida, variables latentes y ecuaciones estructurales
+* Entender por qué los principios de confiabilidad y validez son una necesidad necesaria para una calidad mínima de medición
+* Implementar análisis de ecuaciones estructurales de confiabilidad y validez usando **R-software** y **Mplus**
+* Interpretar los resultados de los análisis de una forma crítica
+* Identificar los usos apropiados e inapropiados de ecuaciones estructurales
+
+# Características de las sesiones
+
+* Las sesiones combinan discusión, teoría y aplicación con el programa R. 
+
+* Antes de cada clase, los alumnos deberán leer una selección de artículos para su discusión en grupo. 
+
+* Los docentes impartirán cada sesión (prepararán un archivo.ppt que subirán a github después de cada clase) y se dedicará siempre un espacio para discusión, ejercicios en grupo y/o implementación de análisis usando el programa R. 
+
+# Materiales: Github y drive
+
+Los docentes utilizarán esta plataforma para compartir los materiales del curso (bibliografía, presentaciones, ejercicios). La dirección relevante es:
+
+https://github.com/hectornajera83/SEMindicadores 
+
+## Lugar y hora
+
+Miércoles. Salón 209. 4 a 7 pm.
+
+# Evaluación 
+
+Se utilizarán tres ejercicios para valorar los contenidos que los alumnos manejan con confianza y aquellos que necesitan reforzarse.  
+
+* Dos ejercicios que combinan análisis crítico y aplicaciones.
+
+* Un ejercicio final que consiste en producir una medida válida y confiable.
+
+* Nuestra prioridad es que aprendan y les sea útil el curso. Su aprendizaje tendrá una expresión númerica no tanto basada en resultados sino en el proceso. 
+
+* Los ejercicios nos indicarán la evolución del grupo e individual. 
+
+# Primera parte 
+
+Las preguntas son las siguientes: 
+
+**¿Por qué el curso se llama así?**
+
+**¿Por qué el curso es importante y útil?**
+
+# Ecuaciones estructurales (SEM)
+
+* SEM es la culminación de más de 100 años de evolución de teoría estadística
+
+* Empezó con @Spearman1904, pasando por Thurstone, Throndike, Hagen, Joreskog y culminando con el trabajo de Muthen. 
+
+* Durante años, el analisis de correlación, el análisis factorial, el marco de medición clásico y el de variables latentes permanecieron vagamente conectados. 
+
+* Como todas las grandes ideas hay grupos de gente apuntanto al mismo lado. 
+
+* @Cudeck2012 tiene una gran definicion: ""
+
+# Referencias
