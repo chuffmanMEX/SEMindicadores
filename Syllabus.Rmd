@@ -23,7 +23,7 @@ header-includes:
 
 El objetivo del curso es desarrollar las capacidades críticas y analíticas de los estudiantes para la producción y escrutinio de índices sociales como pobreza, marginación, clase social, precariedad laboral, seguridad alimentaria, derechos sociales, etc. Al final del curso la expectativa es que los alumnos sean capaces de:
 
-* Encender por qué es importante trabajar con medidas falsables en ciencias sociales
+* Entender por qué es importante trabajar con medidas falsables en ciencias sociales
 * Identificar la diferencia entre un método de agregación y una metodología de escrutinio empírico
 * Apreciar la relevancia de la teoría de la medida para examinar índices sociales 
 * Comprender los vínculos entre la teoría de la medida, variables latentes y ecuaciones estructurales
