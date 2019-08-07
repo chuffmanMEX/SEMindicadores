@@ -2,7 +2,7 @@
 title: "Clase 1. SEM y medición económico social"
 author: "Dr. Héctor Nájera y Dr. Curtis Huffman"
 date: "7/8/2019"
-output: slidy_presentation
+output: powerpoint_presentation
 bibliography: [References_markdown.bib]
 ---
 
@@ -70,6 +70,43 @@ Las preguntas son las siguientes:
 
 * Como todas las grandes ideas hay grupos de gente apuntanto al mismo lado. 
 
-* @Cudeck2012 tiene una gran definicion: ""
+* @Cudeck2012 tiene una gran definicion: *"Desde una perspectiva moderna tiene todos los elementos de ciencia de excelencia: una teoría sustantiva, y un modelo formal que se basa en teoría que considera la dimensión empírica"* (p.3)
+
+# Ecuaciones estructurales (SEM)
+
+* SEM es un marco de unificado de medición y modelación. Es decir, incorpora el error en medición de la variable dependiente (por ejemplo) así como su modelación. Por ejemplo, si queremos modelar los predictores de pobreza
+
+* Es posible saber en un marco unificado si pobreza está bien medida o no (tiene mucho error)
+
+* En econometría muchas veces se parte del supuesto de que las variables están bien medidas
+
+* Tambien podemos tener diferentes estructuras para su predicción (modelos jerárquicos, con efectos indirectos, directos, etc.)
+
+* SEM es ideal para ciencias sociales porque generalmente trabajamos con conceptos/abstracciones. Es decir, con fenómenos que no son directamente observables.
+
+# Ecuaciones estructurales (SEM)
+
+* Las revistas científicas han adoptado alguna variante de SEM (medición o modelación). 
+
+* Algunas revistas no te permiten publicar si no utilizar SEm para validar tu medida.
+
+* Los métodos de SEM son útiles en distintas áreas y son tan novedosos que hay una demanda grande para la gente con capacidad de utilizarla
+
+* Citas Wooldridge (2015): 17,900
+* Citas Byrne (2013) MPLUS y SEM: 23,900
+
+# Próxima clase
+
+* Esencial
+
+@Hanson2018 - Capítulo 1
+
+@Stevens1946 
+
+* Sugeridas
+
+@Hanson1958 - Capítulo 1 (Observación)
+
+@Duhem2003 - Segunda parte: Capítulo 4 (El experimento de física) 
 
 # Referencias
